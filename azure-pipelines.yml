@@ -91,7 +91,7 @@ stages:
 
 #After you've modified it to add the linting, the code in your file YAML file should look like this:
 
-    - script: |
+    - script: 
         python -m venv antenv
         source antenv/bin/activate
         make install
