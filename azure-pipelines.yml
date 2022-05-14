@@ -85,13 +85,8 @@ stages:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-#Step 7: Add a Quality Control Gate
-#Now we'll see how we can add a lint step to gate your code against syntax failure. Follow along with the video below to extend the current configuration to add a quality control gate with pylint.
 
-
-#After you've modified it to add the linting, the code in your file YAML file should look like this:
-
-    - script: 
+    - script: | 
         python -m venv antenv
         source antenv/bin/activate
         make install
