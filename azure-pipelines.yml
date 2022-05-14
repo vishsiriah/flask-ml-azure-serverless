@@ -85,11 +85,3 @@ stages:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-
-    - script: | 
-        python -m venv antenv
-        source antenv/bin/activate
-        make install
-        make lint
-      workingDirectory: $(projectRoot)
-      displayName: 'Run lint tests'
